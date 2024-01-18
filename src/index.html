@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.zoomify/dist/leaflet.zoomify.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <script src="https://unpkg.com/leaflet.zoomify/dist/leaflet.zoomify.js"></script>
+  <script src="https://unpkg.com/leaflet.vectorgrid/dist/Leaflet.VectorGrid.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+  
+  <script  src="Canva.js" type="module" ></script>
+  <script  src="MapCentralAmerica.js" type="module" ></script>
+</head>
+<body style="overflow: hidden; overflow-y: auto;overflow-y: auto;">
+
+  
+
+
+
+  <image src="https://www.undp.org/sites/g/files/zskgke326/files/2023-03/Turkiye_Earthquake_-_Photo_by_Levent_Kulu_-_21.jpg"
+  style="display: flex;align-items: center; margin-left: auto; margin-right: auto; width: 80%; height: 90%;">
+  <h3 style="display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: center;
+  width: 50%;
+  font-size: 50px;">La Actividad Sísmica en Centro América</h3>
+  <p style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 25px;
+  justify-content: center;
+  text-align: justify;">Los terremotos son eventos naturales que se originan por la liberación brusca y violenta de la energía acumulada en las rocas de la corteza terrestre. Esta energía se propaga en forma de ondas sísmicas que causan vibraciones y movimientos en la superficie. La mayoría de los terremotos se deben a la interacción de las placas tectónicas, que son fragmentos de la litosfera que se desplazan y chocan entre sí. El punto donde se inicia el terremoto se llama hipocentro y el punto de la superficie directamente sobre él se llama epicentro. Los terremotos pueden clasificarse según su origen, magnitud y forma.</br></br>
+
+    Tienen un gran impacto en el medio ambiente y en la sociedad, ya que pueden provocar daños materiales, pérdidas humanas, alteraciones ecológicas y cambios geográficos. Algunas de las consecuencias de los terremotos son: deslizamientos de tierra, tsunamis, incendios, derrumbes, grietas, licuefacción, subsidencia y levantamiento. Los terremotos también pueden generar oportunidades de investigación, desarrollo, prevención y mitigación de riesgos.</br></br>
+    
+    Estos afectan a diferentes regiones del mundo, pero hay algunas zonas que son más propensas y vulnerables a este fenómeno. Según el Servicio Geológico de Estados Unidos (Usgs, por sus siglas en inglés), los tres cinturones sísmicos más activos del mundo son: el cinturón sísmico del Pacífico, el cinturón sísmico de Alpide y la Dorsal Mesoatlántica</p>
+  <div id="chartContainer" style="height: 800px; margin: auto; width: 90%;overflow: hidden; overflow-x: auto; font-size: 10px;">
+  </div>
+  <p style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 25px;
+  justify-content: center;
+  text-align: justify;">Como se puede apreciar America Central destaca de forma abrumadora en lo que a cantidad de terremotos respecta, cosa que no es de extrañar pues esta región está sujeta a los movimientos especialmente de tres placas tectónicas: la de Caribe, la de Cocos y la de Norteamérica. Los sismos que sufre esta zona de Centroamérica se generan cuando se presentan fenómenos de subducción, que se dan cuando una placa se mete por debajo de la otra. Estos terremotos pueden ser muy fuertes y destructivos, como el que ocurrió en 1976 en Guatemala, que causó más de 23.000 muertos y 76.000 heridos.</br></br>
+
+Los países más propensos a sufrir terremotos en América Central son Guatemala, El Salvador, Nicaragua y Costa Rica, que forman parte del cinturón sísmico del Pacífico, donde la placa de Cocos se hunde bajo la placa del Caribe. También hay zonas de actividad sísmica en el Caribe, donde la placa del Caribe se desplaza hacia el este y choca con la placa de Norteamérica, como en Haití, que sufrió un devastador terremoto en 2010 que dejó más de 200.000 muertos y 1,5 millones de desplazados.</br></br></br>
+
+La actividad sísmica está determinada por el relieve y la forma de la superficie terrestre, que son el resultado de la interacción de las placas tectónicas que convergen en la región. Algunos de los factores orográficos que afectan a la ocurrencia y la intensidad de los terremotos son: la presencia de cordilleras montañosas, que se forman por la compresión y el levantamiento de las placas; la existencia de fallas geológicas, que son zonas de ruptura y desplazamiento de las rocas; y la ocurrencia de volcanes activos, que son indicadores de la subducción de una placa bajo la otra.
+
+
+</p>
+<h6 style=" display: flex;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+font-size: 30px;
+text-align: justify">Factores determinantes en America Central </h6>
+<p style=" display: flex;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+font-size: 25px;
+width: 70%;
+text-align: justify">-La presencia de cordilleras montañosas, como los Andes Centroamericanos, que son el resultado de la compresión y el levantamiento de las placas tectónicas que convergen en la región.</p>
+<p style=" display: flex;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+font-size: 25px;
+width: 70%;
+text-align: justify">-La existencia de fallas geológicas, como la falla de Motagua, que es el límite entre las placas del Caribe y de Norteamérica, y que es fuente de terremotos frecuentes y potentes.</p>
+<p style=" display: flex;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+font-size: 25px;
+width: 70%;
+text-align: justify">-La ocurrencia de volcanes activos, como el Popocatépetl, el Arenal o el Pacaya, que son indicadores de la subducción de la placa de Cocos bajo la placa del Caribe, y que pueden generar sismos asociados a su actividad eruptiva.</p>
+<p style=" display: block;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+font-size: 25px;
+width: 80%;
+text-align: justify">La profundidad de los terremotos es la distancia desde la superficie de la Tierra hasta el punto donde se origina el sismo, llamado hipocentro o foco. La profundidad de los terremotos influye en la intensidad y la extensión del temblor que se siente en la superficie. Los terremotos se pueden clasificar en tres tipos según su profundidad:</br></br>
+<b style="color: green;">Superficiales:</b> son los que ocurren a menos de 70 kilómetros de profundidad. Son los más frecuentes y los más destructivos, ya que las ondas sísmicas llegan con mayor fuerza y amplitud a la superficie. Ejemplos de terremotos superficiales son el de Northridge, California, en 1994, que tuvo una magnitud de 6,7 y una profundidad de 18,4 kilómetros2, y el de Haití, en 2010, que tuvo una magnitud de 7 y una profundidad de 13 kilómetros.</br></br>
+<b style="color: yellow;">Intermedios:</b> son los que ocurren entre 70 y 150 kilómetros de profundidad. Son menos frecuentes y menos destructivos que los superficiales, ya que las ondas sísmicas se atenúan o debilitan en su camino hacia la superficie. Ejemplos de terremotos intermedios son el de Nisqually, Washington, en 2001, que tuvo una magnitud de 6,8 y una profundidad de 52 kilómetros, y el de Puebla, México, en 2017, que tuvo una magnitud de 7,1 y una profundidad de 51 kilómetros.</br></br>
+<b style="color: red;">Profundos:</b> son los que ocurren a más de 150 kilómetros de profundidad. Son los más raros y los menos destructivos, ya que las ondas sísmicas se disipan o pierden energía en su camino hacia la superficie. Ejemplos de terremotos profundos son el de Fiji, en 2018, que tuvo una magnitud de 8,2 y una profundidad de 563 kilómetros, y el de Bolivia, en 1994, que tuvo una magnitud de 8,2 y una profundidad de 647 kilómetros.</p>
+
+<h2 style=" display: flex;justify-content: center; text-align: justify;">Terremotos de los ultimos 10 años en Centro America coloreados segun su profundidad</h2>
+
+<div id="map" style="height: 500px; width: 90%; align-items: center; justify-content: center; display: flex; margin: auto;"></div>
+  
+<footer style="display: block; text-align: center; align-items: center; margin-top: 20px; font-size: 30px;">by Alejandro Lamelas Delgado c211</footer>
+</body>
+</html>
